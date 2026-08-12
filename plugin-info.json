@@ -1,0 +1,18 @@
+{
+    "id": "uniquenium-official-plugin",
+    "name": "Uniquenium官方插件包",
+    "version": "1.0.0",
+    "author": "Uniquenium-Official",
+    "description": "官方插件包，提供必要的桌面组件，如计算器、屏幕捕获、颜色选择器等。",
+    "settings": "Settings.qml",
+    "components": [
+        {
+            "name": "typing-follower",
+            "nameTr": "输入跟随器",
+            "path": "TypingFollower/TypingFollower.qml"
+        }
+    ],
+    "dlls": [
+        "uniqueniumOfficialplugin.dll"
+    ]
+}
