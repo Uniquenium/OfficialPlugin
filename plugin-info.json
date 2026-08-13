@@ -5,6 +5,7 @@
     "author": "Uniquenium-Official",
     "description": "官方插件包，提供必要的桌面组件，如计算器、屏幕捕获、颜色选择器等。",
     "settings": "Settings.qml",
+    "signals": "SignalHandler.qml",
     "components": [
         {
             "name": "typing-follower",

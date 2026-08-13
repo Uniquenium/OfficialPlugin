@@ -18,4 +18,3 @@ void BackendAll::retranslate(const QObject *object, const QString &language)
         engine->retranslate();
     }
 }
-

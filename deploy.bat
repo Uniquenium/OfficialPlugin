@@ -136,6 +136,12 @@ if exist "%SCRIPT_DIR%\defaultSettings.json" (
     echo   [INFO]  defaultSettings.json
 )
 
+rem --- Copy SignalHandler.qml from source ---
+if exist "%SCRIPT_DIR%\SignalHandler.qml" (
+    copy /y "%SCRIPT_DIR%\SignalHandler.qml" "%DIST_PLUGIN%\" >nul
+    echo   [INFO]  SignalHandler.qml
+)
+
 rem --- Clean artifacts ---
 for %%F in ("%DIST_PLUGIN%\*_qml_module_dir_map.qrc") do (
     if exist "%%F" (
