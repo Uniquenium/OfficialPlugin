@@ -33,6 +33,14 @@ UniDeskComBase{
                 id: backend
             }
 
+            Image{
+                id: img
+                source: "file:" + (pluginDir || "") + "/media/uniquenium-l-bg.png"
+                anchors.horizontalCenter: parent.horizontalCenter
+                width: 175
+                height: 34
+            }
+
             Text {
                 text: qsTr("Message: %1 ") + backend.message
                 font.pixelSize: 14

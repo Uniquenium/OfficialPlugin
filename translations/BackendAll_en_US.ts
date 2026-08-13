@@ -27,32 +27,32 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../TypingFollower/TypingFollower.qml" line="37"/>
+        <location filename="../TypingFollower/TypingFollower.qml" line="45"/>
         <source>Message: %1 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../TypingFollower/TypingFollower.qml" line="43"/>
+        <location filename="../TypingFollower/TypingFollower.qml" line="51"/>
         <source>Counter: %1 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../TypingFollower/TypingFollower.qml" line="49"/>
+        <location filename="../TypingFollower/TypingFollower.qml" line="57"/>
         <source>Say Hello</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../TypingFollower/TypingFollower.qml" line="57"/>
+        <location filename="../TypingFollower/TypingFollower.qml" line="65"/>
         <source>Increment</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../TypingFollower/TypingFollower.qml" line="65"/>
+        <location filename="../TypingFollower/TypingFollower.qml" line="73"/>
         <source>Add 5+3</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../TypingFollower/TypingFollower.qml" line="67"/>
+        <location filename="../TypingFollower/TypingFollower.qml" line="75"/>
         <source>Result: %1 </source>
         <translation type="unfinished"></translation>
     </message>
