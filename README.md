@@ -4,23 +4,14 @@ official plugin pack for Uniquenium
 
 ## Components in Official Plugin
 
-- [ ] Calculator
-- [ ] Screen Capture
+- [x] Typing Follower
 - [ ] Color Picker
-- [ ] Translator
-- [ ] Music
-- [ ] Todo List
-- [ ] Explorer
-- [ ] Typing Follower
-- [ ] Work Sheets
-- [ ] Calendar
-- [ ] Schedule
-- [ ] Notepad
-- [ ] Codepad
-- [ ] Rapid File Downloader
-- [ ] RSS
-- [ ] Screen Using Time
-- [ ] ClipBoard
 - [ ] Encoder/Decoder
-- [ ] Weather
+- [ ] Todo List
+- [ ] Screen Using Time
+
+- [ ] Video Capture
+- [ ] Music
+- [ ] Schedule
+- [ ] RSS
 - [ ] Chart(CPU,GPU,Network status,etc.)

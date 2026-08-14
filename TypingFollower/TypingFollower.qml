@@ -12,6 +12,10 @@ UniDeskComBase{
     chosen: comManager.selectMode===UniDeskComponentSelectMode.NoSelect ? (optionsWindow.visible) : selected
     property int fadeDelay: 1500
     property int fadeDuration: 400
+    property bool listenMouse: true
+    property string displayOrder: "topToBottom"
+
+    onListenMouseChanged: backend.listenMouse = listenMouse
 
     ListModel{
         id: keysModel
@@ -41,11 +45,16 @@ UniDeskComBase{
             }
         }
         var uniqueId = 'key_' + Date.now() + '_' + Math.floor(Math.random() * 10000)
-        keysModel.append({
+        var entry = {
             id: uniqueId,
             text: text,
             releasedAt: 0
-        })
+        }
+        if (displayOrder === "bottomToTop") {
+            keysModel.insert(0, entry)
+        } else {
+            keysModel.append(entry)
+        }
     }
 
     function handleReleased(text) {
@@ -68,9 +77,9 @@ UniDeskComBase{
     }
 
     Item{
-        width: base.width
-        height: base.height
+        y: base.displayOrder === "bottomToTop" ? 0 : base.height - keyColumn.height
         Column{
+            id: keyColumn
             spacing: 10
             Repeater{
                 model: keysModel
@@ -154,6 +163,7 @@ UniDeskComBase{
     }
 
     Component.onCompleted: {
+        backend.listenMouse = listenMouse
         backend.listening = true
     }
 
@@ -165,6 +175,22 @@ UniDeskComBase{
         id: options
         comManager: base.comManager
         editingComponent: base
+    }
+
+    function propertyDataEx(){
+        return {
+            "fadeDelay": base.fadeDelay,
+            "fadeDuration": base.fadeDuration,
+            "listenMouse": base.listenMouse,
+            "displayOrder": base.displayOrder
+        }
+    }
+
+    function loadPropertyDataEx(data){
+        if(data.fadeDelay!==undefined){base.fadeDelay=data.fadeDelay;}
+        if(data.fadeDuration!==undefined){base.fadeDuration=data.fadeDuration;}
+        if(data.listenMouse!==undefined){base.listenMouse=data.listenMouse;}
+        if(data.displayOrder!==undefined){base.displayOrder=data.displayOrder;}
     }
 
 }

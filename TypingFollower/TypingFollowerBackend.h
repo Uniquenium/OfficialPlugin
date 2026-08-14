@@ -4,17 +4,22 @@
 #include <QObject>
 #include <QString>
 #include <QHash>
+#include "stdafx.h"
 
 class TypingFollowerBackend : public QObject
 {
     Q_OBJECT
-    Q_PROPERTY(bool listening READ listening WRITE setListening NOTIFY listeningChanged)
+    Q_PROPERTY(bool listening READ listening WRITE listening NOTIFY listeningChanged)
+    Q_PROPERTY(bool listenMouse READ listenMouse WRITE listenMouse NOTIFY listenMouseChanged)
 public:
     explicit TypingFollowerBackend(QObject *parent = nullptr);
     ~TypingFollowerBackend() override;
 
     bool listening() const;
-    void setListening(bool v);
+    void listening(bool v);
+    bool listenMouse() const;
+    void listenMouse(bool v);
+
     QString keyTextFromVKey(quint32 vkey) const;
 
     Q_INVOKABLE void clearKeys();
@@ -31,17 +36,19 @@ public:
     void removePressedButton(int button) { m_pressedMouseButtons.remove(button); }
 
 signals:
+    void listeningChanged();
+    void listenMouseChanged();
     void keyPressed(const QString &keyText);
     void keyReleased(const QString &keyText);
     void mousePressed(const QString &buttonText);
     void mouseReleased(const QString &buttonText);
-    void listeningChanged();
 
 private:
     void startHook();
     void stopHook();
 
-    bool m_listening = false;
+    bool _listening = false;
+    bool _listenMouse = true;
     QHash<quint32, QString> m_pressedKeys;
     QHash<int, QString> m_pressedMouseButtons;
 };

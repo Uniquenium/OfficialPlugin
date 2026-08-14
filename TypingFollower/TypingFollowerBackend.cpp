@@ -111,6 +111,7 @@ static LRESULT CALLBACK mouseProc(int nCode, WPARAM wParam, LPARAM lParam)
 
         if (button >= 1 && button <= 5) {
             for (auto *inst : s_activeInstances) {
+                if (!inst->listenMouse()) continue;
                 if (isDown && !inst->hasPressedButton(button)) {
                     QString displayName = buildMouseButtonName(button);
                     inst->setPressedButton(button, displayName);
@@ -281,6 +282,7 @@ static void xiEventCallback()
             int button = bp->detail;
             if (button >= 1 && button <= 5) {
                 for (auto *inst : s_activeInstances) {
+                    if (!inst->listenMouse()) continue;
                     if (!inst->hasPressedButton(button)) {
                         QString displayName = buildMouseButtonNameLinux(button, bp->state);
                         inst->setPressedButton(button, displayName);
@@ -295,6 +297,7 @@ static void xiEventCallback()
             int button = br->detail;
             if (button >= 1 && button <= 5) {
                 for (auto *inst : s_activeInstances) {
+                    if (!inst->listenMouse()) continue;
                     if (inst->hasPressedButton(button)) {
                         QString displayName = inst->pressedButtonName(button);
                         inst->removePressedButton(button);
@@ -316,24 +319,39 @@ TypingFollowerBackend::TypingFollowerBackend(QObject *parent)
 
 TypingFollowerBackend::~TypingFollowerBackend()
 {
-    setListening(false);
+    _listening = false;
+    stopHook();
 }
 
 bool TypingFollowerBackend::listening() const
 {
-    return m_listening;
+    return _listening;
 }
 
-void TypingFollowerBackend::setListening(bool v)
+void TypingFollowerBackend::listening(bool v)
 {
-    if (m_listening == v) return;
-    m_listening = v;
+    if (_listening == v) return;
+    _listening = v;
     if (v) {
         startHook();
     } else {
         stopHook();
     }
-    emit listeningChanged();
+    Q_EMIT listeningChanged();
+}
+
+bool TypingFollowerBackend::listenMouse() const
+{
+    return _listenMouse;
+}
+
+void TypingFollowerBackend::listenMouse(bool v)
+{
+    if (_listenMouse == v) return;
+    _listenMouse = v;
+    if (!v)
+        m_pressedMouseButtons.clear();
+    Q_EMIT listenMouseChanged();
 }
 
 void TypingFollowerBackend::restartHook()
