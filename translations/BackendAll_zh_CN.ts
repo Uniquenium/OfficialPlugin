@@ -22,39 +22,8 @@
 <context>
     <name>TypingFollower</name>
     <message>
-        <location filename="../TypingFollower/TypingFollower.qml" line="25"/>
         <source>Plugin Component</source>
-        <translation type="unfinished">插件组件</translation>
-    </message>
-    <message>
-        <location filename="../TypingFollower/TypingFollower.qml" line="45"/>
-        <source>Message: %1 </source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../TypingFollower/TypingFollower.qml" line="51"/>
-        <source>Counter: %1 </source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../TypingFollower/TypingFollower.qml" line="57"/>
-        <source>Say Hello</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../TypingFollower/TypingFollower.qml" line="65"/>
-        <source>Increment</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../TypingFollower/TypingFollower.qml" line="73"/>
-        <source>Add 5+3</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../TypingFollower/TypingFollower.qml" line="75"/>
-        <source>Result: %1 </source>
-        <translation type="unfinished"></translation>
+        <translation type="obsolete">插件组件</translation>
     </message>
 </context>
 <context>

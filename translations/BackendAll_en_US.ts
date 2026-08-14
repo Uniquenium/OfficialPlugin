@@ -20,44 +20,6 @@
     </message>
 </context>
 <context>
-    <name>TypingFollower</name>
-    <message>
-        <location filename="../TypingFollower/TypingFollower.qml" line="25"/>
-        <source>Plugin Component</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../TypingFollower/TypingFollower.qml" line="45"/>
-        <source>Message: %1 </source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../TypingFollower/TypingFollower.qml" line="51"/>
-        <source>Counter: %1 </source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../TypingFollower/TypingFollower.qml" line="57"/>
-        <source>Say Hello</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../TypingFollower/TypingFollower.qml" line="65"/>
-        <source>Increment</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../TypingFollower/TypingFollower.qml" line="73"/>
-        <source>Add 5+3</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../TypingFollower/TypingFollower.qml" line="75"/>
-        <source>Result: %1 </source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
     <name>TypingFollowerOptions</name>
     <message>
         <source>示例插件选项</source>

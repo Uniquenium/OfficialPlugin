@@ -20,6 +20,10 @@ set(CMAKE_AUTOUIC ON)
 find_package(Qt6 6.0 REQUIRED COMPONENTS 
     Core Qml Quick DBus Widgets QuickControls2 Core5Compat LabsPlatform Concurrent LinguistTools)
 
+if(CMAKE_SYSTEM_NAME STREQUAL "Linux")
+    find_package(XCB REQUIRED)
+endif()
+
 qt_standard_project_setup()
 
 set(sources_files "")
@@ -100,6 +104,20 @@ target_include_directories(${PLUGIN_NAME}
         ${CMAKE_CURRENT_SOURCE_DIR}
         ${include_dirs}
 )
+
+if(CMAKE_SYSTEM_NAME STREQUAL "Linux")
+    find_package(XCB REQUIRED COMPONENTS XCB XKB)
+    find_package(PkgConfig REQUIRED)
+    pkg_check_modules(XCB_KEYSYMS REQUIRED xcb-keysyms)
+    target_include_directories(${PLUGIN_NAME} PRIVATE
+        ${XCB_INCLUDE_DIRS}
+        ${XCB_KEYSYMS_INCLUDE_DIRS}
+    )
+    target_link_libraries(${PLUGIN_NAME} PRIVATE
+        XCB::XCB
+        ${XCB_KEYSYMS_LIBRARIES}
+    )
+endif()
 
 target_link_libraries(${PLUGIN_NAME}
     PUBLIC

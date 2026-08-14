@@ -18,9 +18,11 @@ void Plugin::registerQmlTypes(QQmlApplicationEngine *engine)
 {
     Q_UNUSED(engine);
     QString URI = QStringLiteral("org.uniquenium.") + PLUGIN_NAME;
-    char *URI2 = (char *)URI.toUtf8().data();
+    QByteArray uriBytes = URI.toUtf8();
+    const char *URI2 = uriBytes.constData();
     qmlRegisterSingletonType<BackendAll>(URI2, 1, 0, "BackendAll", BackendAll::create);
     qmlRegisterType<TypingFollowerBackend>(URI2, 1, 0, "TypingFollowerBackend");
+    qDebug() << "Plugin: registered QML types with URI:" << URI;
 }
 
 
