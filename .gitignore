@@ -56,3 +56,5 @@ compile_commands.json
 *_qmlcache.qrc
 .qtcreator/
 dist/
+vcpkg_installed/
+vcpkg_log.txt

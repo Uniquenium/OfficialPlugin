@@ -1,0 +1,22 @@
+{
+  "default-registry": {
+    "kind": "git",
+    "baseline": "62739e5f7b27f2e04abd051a61c4848940204d93",
+    "repository": "https://github.com/microsoft/vcpkg"
+  },
+  "registries": [
+    {
+      "kind": "git",
+      "baseline": "768f6a3ad9f9b6c4c2ff390137690cf26e3c3453",
+      "reference": "vcpkg-registry",
+      "repository": "https://github.com/MicrosoftDocs/vcpkg-docs",
+      "packages": [
+        "beicode",
+        "beison"
+      ]
+    }
+  ],
+  "overlay-ports": [
+    "E:\\vcpkg_ports"
+  ]
+}

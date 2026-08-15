@@ -139,11 +139,19 @@ rem --- Copy DLL ---
 copy /y "%BUILD_BIN%\%DLL_NAME%" "%DIST_PLUGIN%\" >nul
 echo   [DLL]   %DLL_NAME%
 
+rem --- Copy all additional runtime dependency DLLs ---
+for /f "delims=" %%F in ('dir /b /a:-d "%BUILD_BIN%\*.dll" 2^>nul') do (
+    set "CUR_DLL=%%~nxF"
+    if not "!CUR_DLL!"=="%DLL_NAME%" (
+        copy /y "%BUILD_BIN%\!CUR_DLL!" "%DIST_PLUGIN%\" >nul
+        echo   [DEP]   !CUR_DLL!
+    )
+)
+
 rem --- Copy all root-level files from build output ---
-rem --- Exclude: .dll, .qrc (artifacts), _qml_module_dir_map, qmldir, .qmltypes ---
+rem --- Exclude: .qrc (artifacts), _qml_module_dir_map, qmldir, .qmltypes ---
 for /f "delims=" %%F in ('dir /b /a:-d "%BUILD_BIN%" 2^>nul') do (
     set "SKIP=0"
-    if /i "%%~xF"==".dll" set "SKIP=1"
     if /i "%%~xF"==".qrc" set "SKIP=1"
     if /i "%%~xF"==".qmltypes" set "SKIP=1"
     if /i "%%F"=="qmldir" set "SKIP=1"

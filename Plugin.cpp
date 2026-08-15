@@ -1,6 +1,7 @@
 #include "Plugin.h"
 #include "BackendAll.h"
 #include "TypingFollower/TypingFollowerBackend.h"
+#include "TwikooComments/TwikooCommentsBackend.h"
 #include <qqmlregistration.h>
 #include <QQmlApplicationEngine>
 #include <QDebug>
@@ -22,6 +23,7 @@ void Plugin::registerQmlTypes(QQmlApplicationEngine *engine)
     const char *URI2 = uriBytes.constData();
     qmlRegisterSingletonType<BackendAll>(URI2, 1, 0, "BackendAll", BackendAll::create);
     qmlRegisterType<TypingFollowerBackend>(URI2, 1, 0, "TypingFollowerBackend");
+    qmlRegisterType<TwikooCommentsBackend>(URI2, 1, 0, "TwikooCommentsBackend");
     qDebug() << "Plugin: registered QML types with URI:" << URI;
 }
 

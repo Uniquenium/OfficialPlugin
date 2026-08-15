@@ -17,12 +17,22 @@ set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
 set(CMAKE_AUTOUIC ON)
 
+if(DEFINED ENV{VCPKG_ROOT} OR DEFINED VCPKG_ROOT)
+    if(DEFINED ENV{VCPKG_ROOT})
+        set(VCPKG_ROOT $ENV{VCPKG_ROOT})
+    endif()
+    list(APPEND CMAKE_PREFIX_PATH "${CMAKE_CURRENT_SOURCE_DIR}/vcpkg_installed/x64-windows")
+endif()
+
 find_package(Qt6 6.0 REQUIRED COMPONENTS 
     Core Qml Quick DBus Widgets QuickControls2 Core5Compat LabsPlatform Concurrent LinguistTools)
 
 if(CMAKE_SYSTEM_NAME STREQUAL "Linux")
     find_package(XCB REQUIRED)
 endif()
+
+find_package(mongocxx CONFIG REQUIRED)
+find_package(bsoncxx CONFIG REQUIRED)
 
 qt_standard_project_setup()
 
@@ -133,6 +143,8 @@ target_link_libraries(${PLUGIN_NAME}
     Qt6::Core5Compat
     Qt6::LabsPlatform
     Qt6::Concurrent
+    mongo::mongocxx_shared
+    mongo::bsoncxx_shared
     # QHotkey::QHotkey
 )
 

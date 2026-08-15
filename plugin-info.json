@@ -11,6 +11,11 @@
             "name": "typing-follower",
             "nameTr": "输入跟随器",
             "path": "TypingFollower/TypingFollower.qml"
+        },
+        {
+            "name": "twikoo-comments",
+            "nameTr": "Twikoo评论",
+            "path": "TwikooComments/TwikooComments.qml"
         }
     ],
     "dlls": [

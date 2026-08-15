@@ -1,0 +1,8 @@
+{
+  "name": "uniquenium-official-plugin",
+  "version": "1.0.0",
+  "dependencies": [
+    "zlib",
+    "mongo-cxx-driver"
+  ]
+}
