@@ -16,6 +16,16 @@
             "name": "twikoo-comments",
             "nameTr": "Twikoo评论",
             "path": "TwikooComments/TwikooComments.qml"
+        },
+        {
+            "name": "todo-list",
+            "nameTr": "待办列表",
+            "path": "TodoList/TodoList.qml"
+        },
+        {
+            "name": "audio-visualizer",
+            "nameTr": "音频可视化",
+            "path": "AudioVisualizer/AudioVisualizer.qml"
         }
     ],
     "dlls": [

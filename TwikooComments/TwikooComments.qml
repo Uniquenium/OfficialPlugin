@@ -24,6 +24,8 @@ UniDeskComBase{
     property string collection: "comment"
     property string pageId: "/"
     property string blogUrl: ""
+    property bool tlsEnabled: false
+    property bool allowInvalidCertificates: false
 
     property var _allComments: []
 
@@ -114,6 +116,8 @@ UniDeskComBase{
     onClusterUriChanged: function() { refreshTimer.restart(); }
     onDatabaseChanged: function() { refreshTimer.restart(); }
     onCollectionChanged: function() { refreshTimer.restart(); }
+    onTlsEnabledChanged: function() { refreshTimer.restart(); }
+    onAllowInvalidCertificatesChanged: function() { refreshTimer.restart(); }
 
     ColumnLayout{
         anchors.fill: parent
@@ -313,7 +317,9 @@ UniDeskComBase{
             "database": base.database,
             "collection": base.collection,
             "pageId": base.pageId,
-            "blogUrl": base.blogUrl
+            "blogUrl": base.blogUrl,
+            "tlsEnabled": base.tlsEnabled,
+            "allowInvalidCertificates": base.allowInvalidCertificates
         }
     }
 
@@ -323,13 +329,15 @@ UniDeskComBase{
         if(data.collection!==undefined){base.collection=data.collection;}
         if(data.pageId!==undefined){base.pageId=data.pageId;}
         if(data.blogUrl!==undefined){base.blogUrl=data.blogUrl;}
+        if(data.tlsEnabled!==undefined){base.tlsEnabled=data.tlsEnabled;}
+        if(data.allowInvalidCertificates!==undefined){base.allowInvalidCertificates=data.allowInvalidCertificates;}
     }
 
     function testConnection(){
-        backend.testConnection(base.clusterUri);
+        backend.testConnection(base.clusterUri, base.tlsEnabled, base.allowInvalidCertificates);
     }
 
     function fetchComments(){
-        backend.fetchComments(base.clusterUri, base.database, base.collection, base.pageId);
+        backend.fetchComments(base.clusterUri, base.database, base.collection, base.pageId, base.tlsEnabled, base.allowInvalidCertificates);
     }
 }

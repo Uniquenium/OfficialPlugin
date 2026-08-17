@@ -19,7 +19,7 @@ set(CMAKE_AUTOUIC ON)
 
 if(DEFINED ENV{VCPKG_ROOT} OR DEFINED VCPKG_ROOT)
     if(DEFINED ENV{VCPKG_ROOT})
-        set(VCPKG_ROOT $ENV{VCPKG_ROOT})
+        set(VCPKG_ROOT $ENV{})
     endif()
     list(APPEND CMAKE_PREFIX_PATH "${CMAKE_CURRENT_SOURCE_DIR}/vcpkg_installed/x64-windows")
 endif()
@@ -147,6 +147,10 @@ target_link_libraries(${PLUGIN_NAME}
     mongo::bsoncxx_shared
     # QHotkey::QHotkey
 )
+
+if(CMAKE_SYSTEM_NAME STREQUAL "Windows")
+    target_link_libraries(${PLUGIN_NAME} PRIVATE winmm)
+endif()
 
 qt_add_translations(${PLUGIN_NAME}
     TS_FILES ${TS_FILES}

@@ -175,6 +175,63 @@ UniDeskWindow{
             RowLayout{
                 width: parent.width
                 spacing: 10
+                Column{
+                    Layout.alignment: Qt.AlignLeft
+                    spacing: 2
+                    UniDeskText{
+                        text: qsTr("TLS / SSL Connection")
+                        font: UniDeskTextStyle.little
+                    }
+                    UniDeskText{
+                        text: qsTr("Enable for MongoDB Atlas or other TLS-requiring databases")
+                        font.pixelSize: 10
+                        color: UniDeskGlobals.isLight ? "#888888" : "#aaaaaa"
+                    }
+                }
+                Item{ Layout.fillWidth: true }
+                UniDeskCheckBox{
+                    checked: editingComponent ? editingComponent.tlsEnabled : false
+                    onToggled: {
+                        if (editingComponent) {
+                            editingComponent.tlsEnabled = checked;
+                            editingComponent.saveComToFile();
+                        }
+                    }
+                }
+            }
+
+            RowLayout{
+                width: parent.width
+                spacing: 10
+                Column{
+                    Layout.alignment: Qt.AlignLeft
+                    spacing: 2
+                    UniDeskText{
+                        text: qsTr("Allow Invalid Certificates")
+                        font: UniDeskTextStyle.little
+                    }
+                    UniDeskText{
+                        text: qsTr("Skip certificate verification (insecure, for troubleshooting only)")
+                        font.pixelSize: 10
+                        color: UniDeskGlobals.isLight ? "#888888" : "#aaaaaa"
+                    }
+                }
+                Item{ Layout.fillWidth: true }
+                UniDeskCheckBox{
+                    enabled: editingComponent ? editingComponent.tlsEnabled : false
+                    checked: editingComponent ? editingComponent.allowInvalidCertificates : false
+                    onToggled: {
+                        if (editingComponent) {
+                            editingComponent.allowInvalidCertificates = checked;
+                            editingComponent.saveComToFile();
+                        }
+                    }
+                }
+            }
+
+            RowLayout{
+                width: parent.width
+                spacing: 10
                 Item{ Layout.fillWidth: true }
                 UniDeskButton{
                     text: qsTr("Test Connection")

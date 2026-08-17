@@ -2,6 +2,125 @@
 <!DOCTYPE TS>
 <TS version="2.1" language="en_US" sourcelanguage="en">
 <context>
+    <name>AudioVisualizer</name>
+    <message>
+        <location filename="../AudioVisualizer/AudioVisualizer.qml" line="67"/>
+        <source>Audio Visualizer</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../AudioVisualizer/AudioVisualizer.qml" line="79"/>
+        <source>Listening</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../AudioVisualizer/AudioVisualizer.qml" line="79"/>
+        <source>Stopped</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../AudioVisualizer/AudioVisualizer.qml" line="85"/>
+        <source>Stop</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../AudioVisualizer/AudioVisualizer.qml" line="85"/>
+        <source>Start</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>AudioVisualizerBackend</name>
+    <message>
+        <location filename="../AudioVisualizer/AudioVisualizerBackend.cpp" line="63"/>
+        <source>Failed to create device enumerator</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../AudioVisualizer/AudioVisualizerBackend.cpp" line="72"/>
+        <source>Failed to get default audio device</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../AudioVisualizer/AudioVisualizerBackend.cpp" line="82"/>
+        <source>Failed to activate audio client</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../AudioVisualizer/AudioVisualizerBackend.cpp" line="94"/>
+        <source>Failed to get mix format</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../AudioVisualizer/AudioVisualizerBackend.cpp" line="116"/>
+        <source>Failed to initialize audio client (loopback)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../AudioVisualizer/AudioVisualizerBackend.cpp" line="130"/>
+        <source>Failed to get buffer size</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../AudioVisualizer/AudioVisualizerBackend.cpp" line="143"/>
+        <source>Failed to get capture service</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../AudioVisualizer/AudioVisualizerBackend.cpp" line="156"/>
+        <source>Failed to start audio client</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>AudioVisualizerOptions</name>
+    <message>
+        <location filename="../AudioVisualizer/AudioVisualizerOptions.qml" line="15"/>
+        <source>Audio Visualizer Options</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../AudioVisualizer/AudioVisualizerOptions.qml" line="50"/>
+        <source>Band Count</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../AudioVisualizer/AudioVisualizerOptions.qml" line="54"/>
+        <source>Number of frequency bands (4-64)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../AudioVisualizer/AudioVisualizerOptions.qml" line="87"/>
+        <source>Bar Gap</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../AudioVisualizer/AudioVisualizerOptions.qml" line="91"/>
+        <source>Spacing between bars in pixels</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../AudioVisualizer/AudioVisualizerOptions.qml" line="124"/>
+        <source>Minimum Bar Height</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../AudioVisualizer/AudioVisualizerOptions.qml" line="128"/>
+        <source>Minimum height of each bar in pixels</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../AudioVisualizer/AudioVisualizerOptions.qml" line="161"/>
+        <source>Auto Start</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../AudioVisualizer/AudioVisualizerOptions.qml" line="165"/>
+        <source>Start listening when component loads</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>Settings</name>
     <message>
         <location filename="../Settings.qml" line="16"/>
@@ -20,89 +139,139 @@
     </message>
 </context>
 <context>
+    <name>TodoList</name>
+    <message>
+        <location filename="../TodoList/TodoList.qml" line="131"/>
+        <source>Todo List</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../TodoList/TodoList.qml" line="137"/>
+        <source> / </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../TodoList/TodoList.qml" line="150"/>
+        <source>添加新的待办事项...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../TodoList/TodoList.qml" line="155"/>
+        <source>添加</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../TodoList/TodoList.qml" line="168"/>
+        <source>全部</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../TodoList/TodoList.qml" line="168"/>
+        <source>未完成</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../TodoList/TodoList.qml" line="168"/>
+        <source>已完成</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../TodoList/TodoList.qml" line="189"/>
+        <source>清除已完成</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../TodoList/TodoList.qml" line="290"/>
+        <source>编辑</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../TodoList/TodoList.qml" line="302"/>
+        <source>删除</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../TodoList/TodoList.qml" line="320"/>
+        <source>暂无待办事项</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>TodoListOptions</name>
+    <message>
+        <location filename="../TodoList/TodoListOptions.qml" line="15"/>
+        <source>待办列表选项</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../TodoList/TodoListOptions.qml" line="48"/>
+        <source>默认筛选</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../TodoList/TodoListOptions.qml" line="57"/>
+        <source>全部</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../TodoList/TodoListOptions.qml" line="57"/>
+        <source>未完成</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../TodoList/TodoListOptions.qml" line="57"/>
+        <source>已完成</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>TwikooComments</name>
     <message>
-        <location filename="../TwikooComments/TwikooComments.qml" line="47"/>
-        <source>Comment posted successfully</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../TwikooComments/TwikooComments.qml" line="50"/>
-        <source>Failed to post comment: </source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../TwikooComments/TwikooComments.qml" line="69"/>
+        <location filename="../TwikooComments/TwikooComments.qml" line="131"/>
         <source>Twikoo Comments</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../TwikooComments/TwikooComments.qml" line="81"/>
+        <location filename="../TwikooComments/TwikooComments.qml" line="143"/>
         <source>Connected</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../TwikooComments/TwikooComments.qml" line="81"/>
+        <location filename="../TwikooComments/TwikooComments.qml" line="143"/>
         <source>Disconnected</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../TwikooComments/TwikooComments.qml" line="91"/>
+        <location filename="../TwikooComments/TwikooComments.qml" line="156"/>
         <source>Loading...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../TwikooComments/TwikooComments.qml" line="91"/>
+        <location filename="../TwikooComments/TwikooComments.qml" line="156"/>
         <source>Refresh</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../TwikooComments/TwikooComments.qml" line="166"/>
-        <source>Name</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../TwikooComments/TwikooComments.qml" line="182"/>
-        <source>Email</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../TwikooComments/TwikooComments.qml" line="201"/>
-        <source>Write a comment...</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../TwikooComments/TwikooComments.qml" line="210"/>
-        <source>Post Comment</source>
+        <location filename="../TwikooComments/TwikooComments.qml" line="258"/>
+        <source>回复</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>TwikooCommentsBackend</name>
     <message>
-        <location filename="../TwikooComments/TwikooCommentsBackend.cpp" line="79"/>
-        <location filename="../TwikooComments/TwikooCommentsBackend.cpp" line="172"/>
-        <location filename="../TwikooComments/TwikooCommentsBackend.cpp" line="251"/>
+        <location filename="../TwikooComments/TwikooCommentsBackend.cpp" line="54"/>
+        <location filename="../TwikooComments/TwikooCommentsBackend.cpp" line="155"/>
         <source>MongoDB cluster URI is empty</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../TwikooComments/TwikooCommentsBackend.cpp" line="176"/>
-        <source>Comment content is empty</source>
+        <location filename="../TwikooComments/TwikooCommentsBackend.cpp" line="119"/>
+        <source>[image]</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../TwikooComments/TwikooCommentsBackend.cpp" line="186"/>
-        <source>Anonymous</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../TwikooComments/TwikooCommentsBackend.cpp" line="230"/>
-        <source>Failed to insert comment</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../TwikooComments/TwikooCommentsBackend.cpp" line="274"/>
+        <location filename="../TwikooComments/TwikooCommentsBackend.cpp" line="185"/>
         <source>Connection successful</source>
         <translation type="unfinished"></translation>
     </message>
@@ -120,27 +289,57 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../TwikooComments/TwikooCommentsOptions.qml" line="73"/>
+        <location filename="../TwikooComments/TwikooCommentsOptions.qml" line="72"/>
         <source>Database</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../TwikooComments/TwikooCommentsOptions.qml" line="99"/>
+        <location filename="../TwikooComments/TwikooCommentsOptions.qml" line="97"/>
         <source>Collection</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../TwikooComments/TwikooCommentsOptions.qml" line="125"/>
-        <source>Page ID / Path</source>
+        <location filename="../TwikooComments/TwikooCommentsOptions.qml" line="122"/>
+        <source>Page URL Prefix</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../TwikooComments/TwikooCommentsOptions.qml" line="152"/>
+        <location filename="../TwikooComments/TwikooCommentsOptions.qml" line="150"/>
+        <source>Blog URL</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../TwikooComments/TwikooCommentsOptions.qml" line="154"/>
+        <source>Do not add trailing slash (e.g. https://example.com)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../TwikooComments/TwikooCommentsOptions.qml" line="182"/>
+        <source>TLS / SSL Connection</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../TwikooComments/TwikooCommentsOptions.qml" line="186"/>
+        <source>Enable for MongoDB Atlas or other TLS-requiring databases</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../TwikooComments/TwikooCommentsOptions.qml" line="210"/>
+        <source>Allow Invalid Certificates</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../TwikooComments/TwikooCommentsOptions.qml" line="214"/>
+        <source>Skip certificate verification (insecure, for troubleshooting only)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../TwikooComments/TwikooCommentsOptions.qml" line="237"/>
         <source>Test Connection</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../TwikooComments/TwikooCommentsOptions.qml" line="161"/>
+        <location filename="../TwikooComments/TwikooCommentsOptions.qml" line="246"/>
         <source>Load Comments</source>
         <translation type="unfinished"></translation>
     </message>

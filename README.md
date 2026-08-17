@@ -6,7 +6,7 @@ official plugin pack for Uniquenium
 
 - [x] Typing Follower
 - [x] Twikoo Comments
-- [ ] Todo List
+- [x] Todo List
 - [ ] System Sound Visualizer
 - [ ] Line Chart By Time
 

@@ -18,8 +18,10 @@ public:
     ~TwikooCommentsBackend() override;
 
     Q_INVOKABLE void fetchComments(const QString &clusterUri, const QString &database,
-                                   const QString &collection, const QString &pageId);
-    Q_INVOKABLE void testConnection(const QString &clusterUri);
+                                   const QString &collection, const QString &pageId,
+                                   bool tlsEnabled = false, bool allowInvalidCertificates = false);
+    Q_INVOKABLE void testConnection(const QString &clusterUri, bool tlsEnabled = false,
+                                    bool allowInvalidCertificates = false);
 
 signals:
     void commentsUpdated(const QVariantList &comments);
