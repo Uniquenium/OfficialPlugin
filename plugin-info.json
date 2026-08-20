@@ -26,6 +26,11 @@
             "name": "audio-visualizer",
             "nameTr": "音频可视化",
             "path": "AudioVisualizer/AudioVisualizer.qml"
+        },
+        {
+            "name": "line-chart",
+            "nameTr": "折线图",
+            "path": "LineChart/LineChart.qml"
         }
     ],
     "dlls": [
